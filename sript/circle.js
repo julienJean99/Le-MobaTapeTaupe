@@ -5,7 +5,7 @@ class circle
     var posx = 0;
     var posy = 0;
     var color = ""
-    
+
     constructor(color) {
 	this.posx = Math.floor(Math.random() * document.body.clientWidth);
 	this.posy = Math.floor(Math.random() * document.body.clientHeigth);

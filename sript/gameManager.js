@@ -8,7 +8,7 @@ class gameManager
 	var current = 0;
 	var prev = 1;
 	var prev2 = 1;
-	
+
 	if (nb <= 2) {
 	    return (1);
 	}
@@ -20,7 +20,7 @@ class gameManager
 	}
 	return (current)
     }
-    
+
     lv_up() {
 	this.lv += 1;
 	this.nb_red = fibonacti(this.lv);
