@@ -19,7 +19,7 @@ function myClick(evt) {
 	}
 	var norme = Math.sqrt(Math.pow(vec.x, 2) + Math.pow(vec.y, 2))
 
-	if (norme <= 10)
+	if (norme <= 20)
 		manager.lvUp();
 	else
 		manager.reset();

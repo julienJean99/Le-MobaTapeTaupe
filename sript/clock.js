@@ -12,12 +12,14 @@ class clock {
 	}
 	
 	startClock() {
-		this.intId = setInterval(this.updateClock, 10, this)
+		this.intId = setInterval(this.updateClock, 100, this)
 	}
 
 	updateClock(_this)
 	{
-		_this.mil -= 10;
+		var timer = 0;
+
+		_this.mil -= 100;
 		if (_this.scd <= 0 && _this.mil <= 0) {
 			_this.stopClock();
 			manager.timeOut();
@@ -34,7 +36,6 @@ class clock {
 
 		this.mil = safeMil % 1000;
 		this.scd = (scd === undefined) ? 0 : Math.floor(scd + (safeMil / 1000))
-		timer = "[" + this.scd + ":" + this.mil + "]"
 	}
 }
 
