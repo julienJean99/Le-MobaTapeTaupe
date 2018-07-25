@@ -14,6 +14,7 @@ class clock {
 	startClock() {
 		this.intId = setInterval(this.updateClock, 10, this)
 	}
+
 	updateClock(_this)
 	{
 		_this.mil -= 10;
@@ -32,9 +33,9 @@ class clock {
 		var safeMil = (mil === undefined) ? 0 : mil;
 
 		this.mil = safeMil % 1000;
-		this.scd = (scd === undefined) ? 0 : Math.floor(scd + (safeMil / 1000));
+		this.scd = (scd === undefined) ? 0 : Math.floor(scd + (safeMil / 1000))
 		timer = "[" + this.scd + ":" + this.mil + "]"
-		}
+	}
 }
 
 var tclock = new clock()

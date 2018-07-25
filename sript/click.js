@@ -1,15 +1,26 @@
 
 
 function myClick(evt) {
-	var canavas = document.getElementById("myCanvas");
-	var rec = canavas.getBoundingClientRect();
-	var mPosX = evt.clientX - rec.left;
-	var mPosY = evt.clientY - rec.top;
+	var canvas = document.getElementById("myCanvas");
+	var rec = canvas.getBoundingClientRect();
+	var scale = {
+		x: canvas.width / rec.width,
+		y: canvas.height / rec.height
+	}
+	var mPos = {
+		x: (evt.clientX - rec.left) * scale.x,
+		y: (evt.clientY - rec.top) * scale.y
+	}
+	if (balls.ballList[0] === undefined)
+		return;
 	var vec = {
-		x: balls.ballList[0].posX - mPosX,
-		y: balls.ballList[0].posY - mPosY}
+		x: (mPos.x - balls.ballList[0].posX), 
+		y: (mPos.y - balls.ballList[0].posY)
+	}
+	var norme = Math.sqrt(Math.pow(vec.x, 2) + Math.pow(vec.y, 2))
 
-	console.log("mouse coord " + mPosX + "," + mPosY)
+	if (norme <= 10)
+		manager.lvUp();
+	else
+		manager.reset();
 }
-
-console.log("gone through here")

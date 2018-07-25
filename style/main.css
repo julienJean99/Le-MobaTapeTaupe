@@ -1,17 +1,50 @@
+
+html {
+	background: radial-gradient(#00d7ff 60%, #0087ff)
+}
+
 h1 {
-    position: relative;
-    left: 45%;
+	text-align: center;
 }
 
 button {
-    position: relative;
-    left: 50%;
-    margin:auto;
+	height: 40px;
+	width: 100px;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	background: linear-gradient(180deg, #00d75f, #00af5f);
+	border: 1px solid #00d75f;
+	border-radius: 20px;
+}
+
+button:hover{
+	background: linear-gradient(180deg, #00d75f, #00d787);
+	cursor: pointer;
+}
+
+ul {
+	list-style-type: none;
+	position: relative;
+	top: 2px;
+	height: 20px;
+	width: 500px;
+	padding: 0px;
+	margin: 0px;
+	border: 1px solid black;
+	border-bottom: none;
+	Background-color: rgba(0, 0, 0, .05);
+}
+
+ul li {
+	float: left;
+	padding: 0px 10px;
+	font-size: 18px;
 }
 
 #myCanvas {
-    width: 100%;
-    height: 100%;
-    border: 1px solid #999;
-    
+	width: 100%;
+	height: 100%;
+	border: 1px solid black;
+	background-color: white;
 }
